@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 @Component({
   selector: 'page-home',
@@ -9,7 +10,8 @@ export class HomePage {
   qrData = null;
   createdCode = null;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,
+    private socialSharing: SocialSharing) {
 
   }
 
@@ -17,4 +19,7 @@ export class HomePage {
     this.createdCode = this.qrData;
   }
 
+  regularShare() {
+    this.socialSharing.share(this.createdCode, null, null, null);
+  }
 }

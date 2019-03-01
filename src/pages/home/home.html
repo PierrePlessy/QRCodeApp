@@ -20,6 +20,6 @@
       <p>Value: {{ createdCode }}</p>
     </ion-card-content>
   </ion-card>
+  <button *ngIf="createdCode" ion-button full (click)="regularShare()">Share</button>
 
-  
 </ion-content>

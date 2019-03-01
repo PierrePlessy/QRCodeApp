@@ -17,6 +17,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { StorageProvider } from '../providers/storage/storage';
 import { IonicStorageModule } from '@ionic/storage';
+import { FileChooser } from '@ionic-native/file-chooser';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { IonicStorageModule } from '@ionic/storage';
     QrCodeProvider,
     BarcodeScanner,
     SocialSharing,
-    StorageProvider
+    StorageProvider,
+    FileChooser
   ]
 })
 export class AppModule {}
